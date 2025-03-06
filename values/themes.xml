@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WarehouseManager" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.WarehouseManager" parent="Base.Theme.WarehouseManager" />
+
+    <style name="FloatButton">
+        <item name="tint">@color/white</item>
+        <item name="backgroundTint">@color/green</item>
+    </style>
+
+    <style name="IncreaseButton">
+        <item name="tint">@color/white</item>
+        <item name="backgroundTint">@color/green</item>
+    </style>
+
+    <style name="DecreaseButton">
+        <item name="tint">@color/white</item>
+        <item name="backgroundTint">@color/red</item>
+    </style>
+
+    <style name="PrefButton">
+        <item name="drawableTint">@color/white</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
+</resources>

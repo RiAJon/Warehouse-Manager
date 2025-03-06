@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/threshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notification_threshold"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/threshold"
+        android:text="@string/quantity_user_check"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/enter_threshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:inputType="number"
+        android:layout_below="@id/description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/numberAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_threshold"
+        android:text="@string/number_ask"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/enter_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emulator_number"
+        android:inputType="phone"
+        android:layout_below="@id/numberAsk"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/update"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        android:layout_below="@id/enter_number"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"
+        android:backgroundTint="@color/green"
+        android:onClick="onUpdateThresh" />
+
+    <Button
+        android:id="@+id/BackButton"
+
+        android:onClick="onBack"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/update"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="110dp"
+        android:backgroundTint="@color/black"
+        android:gravity="bottom"
+        android:text="@string/back" />
+
+    <Button
+        android:id="@+id/LogoutButton"
+
+        android:onClick="onLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/update"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="110dp"
+        android:backgroundTint="@color/red"
+        android:gravity="bottom"
+        android:text="Logout" />
+
+</RelativeLayout>

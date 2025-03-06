@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItem">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:clickable="true"
+        android:onClick="onPhotoClick"
+
+        app:srcCompat="@drawable/camera"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/camera"
+        android:layout_marginTop="30dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/item"
+        android:clickable="true"
+        android:onClick="onPhotoClick"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_photo"
+        android:textColor="@color/orange"
+        android:textSize="26sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"/>
+
+    <TextView
+        android:id="@+id/name"
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+
+        app:layout_constraintTop_toBottomOf="@id/item"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <EditText
+        android:id ="@+id/enter_name"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="Item Name"
+        android:hint="@string/enter_item_name"
+        android:inputType="text"
+
+        app:layout_constraintTop_toBottomOf="@id/item"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintBaseline_toBaselineOf="@id/name"/>
+
+    <TextView
+        android:id="@+id/sku"
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/sku_add"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id ="@+id/enter_sku"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="Item SKU"
+        android:hint="@string/enter_item_sku"
+        android:inputType="text"
+
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toRightOf="@id/sku"
+        app:layout_constraintBaseline_toBaselineOf="@id/sku"/>
+
+    <TextView
+        android:id="@+id/count"
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/quantity"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:layout_marginBottom="30dp"
+
+        app:layout_constraintBottom_toTopOf="@id/add_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id ="@+id/quantView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textSize="20sp"
+
+        app:layout_constraintLeft_toRightOf="@+id/count"
+        app:layout_constraintBaseline_toBaselineOf="@id/count"
+        android:layout_marginLeft="5dp"/>
+
+
+    <Button
+        android:id="@+id/increase"
+
+        android:onClick="onIncrease"
+        style="@style/IncreaseButton"
+        android:layout_width="63dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/circle_button"
+        android:text="@string/increase"
+        android:textSize="30sp"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/count"
+        app:layout_constraintLeft_toRightOf="@+id/quantView" />
+
+    <Button
+        android:id="@+id/decrease"
+
+        android:onClick="onDecrease"
+        style="@style/DecreaseButton"
+        android:layout_width="63dp"
+        android:layout_height="62dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/circle_button"
+
+        android:text="@string/decrease"
+        android:textSize="30sp"
+
+        app:layout_constraintRight_toLeftOf="@+id/count"
+        app:layout_constraintBaseline_toBaselineOf="@id/count"/>
+
+    <Button
+        android:id="@+id/add_button"
+
+        android:onClick="onAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:backgroundTint="@color/green"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="130dp"/>
+
+    <Button
+        android:id="@+id/BackButton"
+
+        android:onClick="onBack"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
